@@ -1,0 +1,40 @@
+/* 
+    Created on : Oct 15, 2024, 6:48:42 PM
+    Author     : MK
+*/
+
+.text-field{
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 16;
+    -fx-text-fill: #404000;
+    -fx-prompt-text-fill: gray;
+}
+
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-border-radius: 5px;
+    -fx-min-width: 95px;
+    -fx-max-width: 95px;
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 12;
+    -fx-text-fill: #404000;
+}
+
+#intro-title{
+    -fx-font-size: 65;
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: black;
+}
+
+#intro-by{
+    -fx-font-size: 20;
+    -fx-font-family: "Akhbar MT";
+    -fx-text-fill: black;
+}
