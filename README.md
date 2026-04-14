@@ -33,11 +33,12 @@ A Java-based stack data structure simulator that provides a visual and interacti
 # Run the application with Gradle
 gradle run
 
-# Or if you're using Gradle wrapper
+# Or if you're using Gradle wrapper, run the folowing commands
+./gradlew build
 ./gradlew run
 ```
 
-**Using Java directly**:
+**Using Java directly (if you have openjfx)**:
 ```bash
 # Compile the Java files
 javac -d bin src/*.java
