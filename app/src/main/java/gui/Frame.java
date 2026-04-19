@@ -131,8 +131,13 @@ public class Frame extends Application{
             }
             
             if (comboBox.getValue().equals("Peek")){
-                outputTextField.setText(stack.peek());
-                instruction.setText("");
+                if (stack.isEmpty()) {
+                    outputTextField.clear();
+                    instruction.setText("Cannot peek, the stack is empty !!");
+                } else {
+                    outputTextField.setText(stack.peek());
+                    instruction.setText("");
+                }
             }
             
             if (comboBox.getValue().equals("contain")){
