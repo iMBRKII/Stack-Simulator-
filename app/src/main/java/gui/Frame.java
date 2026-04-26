@@ -159,7 +159,19 @@ public class Frame extends Application{
                     outputTextField.setText(stack.display());
                 }
             }
-        });
+
+             if (comboBox.getValue().equals("Clear")){
+                if (stack.isEmpty()) {
+                    instruction.setText("The stack is already empty.");
+                } else {
+                    stack.clear();
+                    stack.setLastElement(null);
+                    drawDividedRectangle(stack.getMaxDiv());
+                    outputTextField.clear();
+                    instruction.setText("Stack has been completely cleared.");
+                }
+            }
+        });           
 
         sizeField.setOnAction((var e) -> {
             if (!sizeField.getText().isEmpty()) {
