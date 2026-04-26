@@ -77,7 +77,7 @@ public class Stack {
     
     private boolean linearSearch(String key){
         for (int i = 0; i < array.size(); i++){
-            if(array.get(i).equals(key)){
+            if(array.get(i).equalsIgnoreCase(key)){
                 return true;
             }
         }
