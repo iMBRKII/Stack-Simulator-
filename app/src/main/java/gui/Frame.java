@@ -192,6 +192,8 @@ public class Frame extends Application{
         comboBox.setOnAction(e ->{
             inputTextField.clear();
             inputTextField.requestFocus();
+            outputTextField.clear();
+            instruction.setText("");
         });
     }
     
