@@ -71,7 +71,7 @@ public class Frame extends Application{
         scene = new Scene(stackPane, 1920, 1050);
             scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(scene);
-        stage.setTitle("Stack simulator");
+        stage.setTitle("Stack Simulator Application");
         stage.getIcons().add(new Image("icons/stack.png"));
         stage.show();
     }
