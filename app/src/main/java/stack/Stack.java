@@ -72,7 +72,7 @@ public class Stack {
     }
     
     public String display(){
-        return array.toString();
+        return array.toString().replace("[","").replace("]","");
     }
     
     private boolean linearSearch(String key){
