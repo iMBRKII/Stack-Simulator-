@@ -278,7 +278,7 @@ public class Frame extends Application{
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
         gc.setStroke(Color.BLACK);
-        gc.setLineWidth(2);
+        gc.setLineWidth(1);
         gc.strokeRect(x, y, rectWidth, rectHeight);
 
         double divisionHeight = rectHeight / divisions;
@@ -286,13 +286,21 @@ public class Frame extends Application{
             gc.strokeLine(x, y + i * divisionHeight, x + rectWidth, y + i * divisionHeight);
         }
 
-        gc.setFill(Color.BEIGE);
+        // 1. Tell JavaFX to center the text alignment both horizontally and vertically
+        gc.setFill(Color.WHITESMOKE);
+        gc.setAextAline(javafx.scene.text.TextAlignment.CENTER);
+        gc.setTextBaseline(javafx.geometry.VPos.CENTER);
 
         for (int i = 0; i < stack.getSize(); i++) {
             double currentY = y + rectHeight - (i + 1) * divisionHeight;
             gc.fillRect(x, currentY, rectWidth, divisionHeight);
             gc.setStroke(Color.BLACK);
-            gc.strokeText(stack.getElementAt(i), x + 10, currentY + divisionHeight / 2);
+
+            // 2. Pass the exact center coordinates of the current block
+            double centerX = x + (rectWidth / 2);
+            double centerY = currentY + (divisionHeight / 2);
+            gc.strokeText(stack.getElementAt(i), centerX, centerY);
+
             gc.strokeRect(x, currentY, rectWidth, divisionHeight);
         }
     }
