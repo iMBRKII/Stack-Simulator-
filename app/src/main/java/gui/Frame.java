@@ -160,7 +160,7 @@ public class Frame extends Application{
                 }
             }
 
-             if (comboBox.getValue().equals("Clear")){
+             if (comboBox.getValue().equals("clear")){
                 if (stack.isEmpty()) {
                     instruction.setText("The stack is already empty.");
                 } else {
@@ -217,7 +217,8 @@ public class Frame extends Application{
                 "isFull",
                 "contain",
                 "Peek",
-                "display"
+                "display",
+                "clear"
         );
         
         comboBox.setValue("Push");
@@ -288,7 +289,7 @@ public class Frame extends Application{
 
         // 1. Tell JavaFX to center the text alignment both horizontally and vertically
         gc.setFill(Color.WHITESMOKE);
-        gc.setAextAline(javafx.scene.text.TextAlignment.CENTER);
+        gc.setTextAlign(javafx.scene.text.TextAlignment.CENTER);
         gc.setTextBaseline(javafx.geometry.VPos.CENTER);
 
         for (int i = 0; i < stack.getSize(); i++) {
